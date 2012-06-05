@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title>FuelPHP Framework</title>
 	<?php echo Asset::css('bootstrap.css'); ?>
+	<?php echo Asset::js(array('jquery.js','bootstrap.js','bootstrap-dropdown.js')); ?>
 	</head>
 <body>
 	<div id="header">
@@ -12,6 +13,56 @@
 		</div>
 	</div>
 	<div class="container">
+		<div id="navbar" class="navbar navbar-static">
+			<div class="navbar-inner">
+				<div class="container" style="width: auto;">
+					<a class="brand" href="#">Project Name</a>
+						<ul class="nav">
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Action</a></li>
+									<li><a href="#">Another action</a></li>
+									<li><a href="#">Something else here</a></li>
+									<li class="divider"></li>
+									<li><a href="#">Separated link</a></li>
+								</ul>
+							</li>
+								<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown 2 <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Action</a></li>
+									<li><a href="#">Another action</a></li>
+									<li><a href="#">Something else here</a></li>
+									<li class="divider"></li>
+									<li><a href="#">Separated link</a></li>
+								</ul>
+								</li>
+								</ul>
+								<ul class="nav pull-right">
+									<li id="fat-menu" class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown 3 <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Action</a></li>
+									<li><a href="#">Another action</a></li>
+									<li><a href="#">Something else here</a></li>
+									<li class="divider"></li>
+									<li><a href="#">Separated link</a></li>
+								</ul>
+								</li>
+						</ul>
+				</div>
+			</div>
+		</div> <!-- /navbar -->
+		<ul class="breadcrumb">
+			<li>
+				<a href="#">Home</a> <span class="divider">/</span>
+			</li>
+			<li>
+				<a href="#">Library</a> <span class="divider">/</span>
+			</li>
+			<li class="active">Data</li>
+		</ul>
 		<div class="hero-unit">
 			<h1>Welcome!</h1>
 			<p>You have successfully installed the FuelPHP Framework.</p>
@@ -47,5 +98,8 @@
 			</p>
 		</footer>
 	</div>
+<script>
+$('.dropdown-toggle').dropdown();
+</script>
 </body>
 </html>
